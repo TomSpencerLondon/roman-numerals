@@ -7,7 +7,11 @@ class RomanNumerals
   }
 
   def self.convert(number)
-    ROMAN_NUMERALS[number]
+    roman_numeral = ""
+    ROMAN_NUMERALS.each do |k, v|
+      (number / k).times { roman_numeral << v; number = number - k }
+    end
+    roman_numeral
   end
 
 end
