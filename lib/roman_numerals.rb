@@ -23,5 +23,4 @@ class RomanNumerals
     end
     roman_numeral
   end
-
 end
